@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro'; // <--- Nuevo
 import Hero from '../components/Hero.astro';
 import TrustBar from '../components/TrustBar.astro';
 import Services from '../components/Services.astro';
@@ -8,13 +9,13 @@ import Contact from '../components/Contact.astro';
 ---
 
 <Layout>
-  <main>
-    <Hero />
+  <Header /> <main class="pt-20"> <Hero />
     <TrustBar />
     <Services />
     <Portfolio />
     <Contact />
   </main>
+  </Layout>
   
   <footer class="border-t border-white/10 bg-[#050505] py-8 text-center text-gray-500 text-sm">
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
