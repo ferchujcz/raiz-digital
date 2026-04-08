@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    /* Fondo Deep Forest Night inspirado en entornos de desarrollo */
+    @apply bg-[#0A0A0A] text-white font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    @apply font-extrabold tracking-tight;
+  }
+}
+
+/* Efecto Lighting Dark para fondos */
+.bg-radial-glow {
+  background: radial-gradient(circle at center, rgba(0, 255, 133, 0.15) 0%, transparent 60%);
+}
+
+/* Animaciones de Scroll (Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

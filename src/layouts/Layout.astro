@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    
+    <title>Raíz Digital | Desarrollo de Software a Medida y Automatización</title>
+    
+    <meta name="description" content="Eliminamos cuellos de botella con software a medida, automatización de tareas e IA aplicada. Soluciones eficientes para tu negocio sin intermediarios." />
+    <meta name="keywords" content="desarrollo de software a medida, automatización de procesos, IA aplicada, ERP, sistemas web" />
+    
+    <meta property="og:title" content="Raíz Digital | Ingeniería de Software" />
+    <meta property="og:description" content="Desarrollo de software a medida y automatización para escalar tu negocio." />
+    <meta property="og:type" content="website" />
+</head>
+<body class="bg-[#0A0A0A] text-white font-sans antialiased overflow-x-hidden">
+    <slot />
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, { threshold: 0.1 }); 
+
+            reveals.forEach(reveal => revealOnScroll.observe(reveal));
+        });
+    </script>
+</body>
+</html>
