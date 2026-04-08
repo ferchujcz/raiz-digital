@@ -34,3 +34,7 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* Parche de seguridad para móviles */
+.container {
+  max-width: 100%;
+}
