@@ -2,18 +2,40 @@
 ---
 <header class="fixed top-0 w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-white/5">
   <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-    <a href="#" class="text-2xl font-black tracking-tighter text-white">
+    <a href="/" class="text-2xl font-black tracking-tighter text-white">
       RAÍZ<span class="text-[#00FF85]">.</span>
     </a>
     
     <nav class="hidden md:flex gap-8 text-sm font-bold text-gray-400">
-      <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
-      <a href="#proyectos" class="hover:text-white transition-colors">Portafolio</a>
-      <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="hover:text-[#00FF85] transition-colors">LinkedIn</a>
+      <a href="/#servicios" class="hover:text-white transition-colors">Servicios</a>
+      <a href="/#proyectos" class="hover:text-white transition-colors">Portafolio</a>
+      <a href="https://www.linkedin.com/in/fernando-czaban-b339642a6" target="_blank" class="hover:text-[#00FF85] transition-colors">LinkedIn</a>
     </nav>
 
-    <a href="#contacto" class="bg-[#00FF85] text-black px-6 py-2.5 rounded-full font-bold transition-transform hover:scale-105 text-sm">
+    <button id="menu-btn" class="md:hidden text-white p-2" aria-label="Menú">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    </button>
+
+    <a href="/#contacto" class="hidden md:block bg-[#00FF85] text-black px-6 py-2.5 rounded-full font-bold transition-transform hover:scale-105 text-sm">
       Consulta Directa
     </a>
   </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-[#0A0A0A] border-b border-white/5 p-6 space-y-4">
+    <a href="/#servicios" class="block text-gray-400 font-bold hover:text-[#00FF85]">Servicios</a>
+    <a href="/#proyectos" class="block text-gray-400 font-bold hover:text-[#00FF85]">Portafolio</a>
+    <a href="https://www.linkedin.com/in/fernando-czaban-b339642a6" target="_blank" class="block text-gray-400 font-bold hover:text-[#00FF85]">LinkedIn</a>
+    <a href="/#contacto" class="block text-[#00FF85] font-bold mt-4">Consulta Directa</a>
+  </div>
 </header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>

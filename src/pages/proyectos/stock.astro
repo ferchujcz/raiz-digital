@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Contact from '../../components/Contact.astro';
+---
+
+<Layout title="ERP Stock Inteligente - Raíz Digital">
+  <Header />
+  
+  <main class="pt-32 pb-24 container mx-auto px-6">
+    <a href="/#proyectos" class="text-[#00FF85] mb-8 inline-flex items-center gap-2 hover:underline font-bold">
+      &larr; Volver al Portafolio
+    </a>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-start mt-4">
+      <div class="space-y-4">
+        <div class="bg-[#0A0A0A] rounded-3xl aspect-video flex items-center justify-center border border-white/10 overflow-hidden relative group">
+           <span class="text-gray-600 font-bold uppercase text-xs tracking-widest">Captura de Pantalla 1</span>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-[#0A0A0A] rounded-2xl aspect-video border border-white/10 flex items-center justify-center">
+            <span class="text-gray-600 font-bold uppercase text-[10px] tracking-widest">Captura 2</span>
+          </div>
+          <div class="bg-[#0A0A0A] rounded-2xl aspect-video border border-white/10 flex items-center justify-center">
+            <span class="text-gray-600 font-bold uppercase text-[10px] tracking-widest">Captura 3</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="mb-4 flex gap-2">
+            <span class="px-3 py-1 text-xs font-bold text-[#00FF85] bg-[#00FF85]/10 rounded-full uppercase tracking-wider">Sistema Completado</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-black mb-6 text-white leading-tight">ERP Stock <span class="text-[#00FF85]">Inteligente</span></h1>
+        
+        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+          Un sistema de gestión integral diseñado específicamente para eliminar pérdidas y automatizar el trabajo rutinario. No es solo un inventario, es un motor que predice el comportamiento de tu negocio.
+        </p>
+        
+        <h3 class="text-xl font-bold mb-4 text-white border-b border-white/10 pb-2">Características Destacadas:</h3>
+        <ul class="space-y-5 mb-10">
+          <li class="flex items-start gap-3 text-gray-300">
+            <span class="text-[#00FF85] text-xl mt-[-2px]">&check;</span> 
+            <div>
+              <strong class="text-white block">Escaneo Móvil Universal</strong>
+              Convierte cualquier celular Android o iOS en un lector de código de barras para auditar depósitos al instante.
+            </div>
+          </li>
+          <li class="flex items-start gap-3 text-gray-300">
+            <span class="text-[#00FF85] text-xl mt-[-2px]">&check;</span> 
+            <div>
+              <strong class="text-white block">Carga Automática OCR</strong>
+              Sube el PDF de la factura de tu proveedor y el sistema carga los productos y actualiza los precios solo.
+            </div>
+          </li>
+          <li class="flex items-start gap-3 text-gray-300">
+            <span class="text-[#00FF85] text-xl mt-[-2px]">&check;</span> 
+            <div>
+              <strong class="text-white block">Alertas Predictivas</strong>
+              Notificaciones cruzadas: "Te queda stock para 3 días, el proveedor pasa mañana. Pide 50 unidades."
+            </div>
+          </li>
+        </ul>
+
+        <a href="https://wa.link/om5m4h" target="_blank" class="flex justify-center items-center gap-3 w-full bg-[#00FF85] text-black text-center py-5 rounded-2xl font-black text-lg hover:scale-[1.02] transition-transform">
+          Quiero solicitar este sistema
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <Contact />
+</Layout>
