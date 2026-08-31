@@ -1,22 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'; // <--- Nuevo
+import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import TrustBar from '../components/TrustBar.astro';
 import Services from '../components/Services.astro';
+import Standards from '../components/Standards.astro';
 import Portfolio from '../components/Portfolio.astro';
 import Contact from '../components/Contact.astro';
 ---
 
-<Layout>
-  <Header /> <main class="pt-20"> <Hero />
-    <TrustBar />
-    <Services />
-    <Portfolio />
-    <Contact />
-  </main>
-  </Layout>
-  
+---
+import Layout from '../layouts/Layout.astro';
+// ... tus otros imports
+---
+<Layout 
+    title="Raíz Digital | Soluciones Informáticas en Misiones"
+    description="No te vendo software, te vendo soluciones. Desde digitalización express hasta sistemas ERP a medida."
+>
+    <Header />
+    <main>
+        <Hero />
+        <Services />
+        <Standards /> <!-- Aquí agregamos el nuevo componente -->
+        <Portfolio />
+        <Contact />
+    </main>
+</Layout>
+
   <footer class="border-t border-white/10 bg-[#050505] py-8 text-center text-gray-500 text-sm">
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p>&copy; {new Date().getFullYear()} Raíz Digital. Todos los derechos reservados.</p>

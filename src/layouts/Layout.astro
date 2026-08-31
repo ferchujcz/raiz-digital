@@ -1,41 +1,94 @@
 ---
-import '../styles/global.css';
+// src/layouts/Layout.astro (Solo te muestro la parte de abajo, no borres lo de arriba)
 ---
-
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-    
-    <title>Raíz Digital | Desarrollo de Software a Medida y Automatización</title>
-    
-    <meta name="description" content="Eliminamos cuellos de botella con software a medida, automatización de tareas e IA aplicada. Soluciones eficientes para tu negocio sin intermediarios." />
-    <meta name="keywords" content="desarrollo de software a medida, automatización de procesos, IA aplicada, ERP, sistemas web" />
-    
-    <meta property="og:title" content="Raíz Digital | Ingeniería de Software" />
-    <meta property="og:description" content="Desarrollo de software a medida y automatización para escalar tu negocio." />
-    <meta property="og:type" content="website" />
-</head>
-<body class="bg-[#0A0A0A] text-white font-sans antialiased overflow-x-hidden">
-    <slot />
+<html lang="es">
+    <head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+        
+        <!-- SEO BÁSICO -->
+		<title>{title}</title>
+        <meta name="description" content={description} />
+        
+        <!-- CANONICAL URL (Evita que Google piense que tienes contenido duplicado) -->
+        <link rel="canonical" href={canonicalURL} />
 
-    <script is:inline>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            const revealOnScroll = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target); 
-                    }
-                });
-            }, { threshold: 0.1 }); 
+        <!-- OPEN GRAPH (Para que se vea bien en WhatsApp, Facebook, LinkedIn) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(image, canonicalURL)} />
 
-            reveals.forEach(reveal => revealOnScroll.observe(reveal));
-        });
+        <!-- TWITTER CARDS -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={new URL(image, canonicalURL)} />
+<!-- DATOS ESTRUCTURADOS (JSON-LD) PARA SEO LOCAL -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Raíz Digital",
+    "image": "https://www.tudominio.com/img/tu-logo.png",
+    "description": "Consultoría Informática, automatización y desarrollo de software a medida.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oberá",
+        "addressRegion": "Misiones",
+        "addressCountry": "AR"
+    },
+    "url": "https://www.tudominio.com",
+    "priceRange": "$$"
+    }
     </script>
-</body>
+
+    <!-- Verificación de Google Search Console -->
+    <meta name="google-site-verification" content="AQUI_IRA_EL_CODIGO_QUE_TE_DE_GOOGLE" />
+
+    <!-- Google Analytics (GA4) -->
+    <!-- Google te dará un script como este, va justo antes del cierre del </head> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    </script>
+	</head>
+    <body>
+        <slot /> <!-- Aquí se renderiza tu página -->
+
+        <!-- ESTE SCRIPT HACE QUE LAS COSAS APAREZCAN AL BAJAR -->
+        <script>
+            // Función para iniciar el observador
+            const initScrollReveal = () => {
+                const hiddenElements = document.querySelectorAll('.reveal');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            // Opcional: Descomenta la siguiente línea si quieres que la animación ocurra SOLO UNA VEZ
+                            // observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15 // Se activa cuando se ve el 15% del elemento
+                });
+
+                hiddenElements.forEach((el) => observer.observe(el));
+            };
+
+            // En Astro, hay que ejecutarlo cuando el DOM carga
+            document.addEventListener('DOMContentLoaded', initScrollReveal);
+            
+            // Si usas ViewTransitions de Astro, también necesitas esto:
+            document.addEventListener('astro:page-load', initScrollReveal);
+        </script>
+    </body>
 </html>
