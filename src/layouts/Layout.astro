@@ -1,9 +1,24 @@
 ---
-// src/layouts/Layout.astro (Solo te muestro la parte de abajo, no borres lo de arriba)
+// 1. ESTO ES EL FRONTMATTER (Las variables que te faltaban)
+interface Props {
+	title: string;
+    description?: string;
+    image?: string;
+}
+
+const { 
+    title, 
+    description = "Consultoría Informática y Desarrollo de Software a medida en Misiones. Soluciones digitales para empresas.",
+    image = "/img/tu-logo-o-portada.jpg" 
+} = Astro.props;
+
+// Calculamos la URL para evitar el error de canonicalURL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.raizsoluciones.com');
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
-    <head>
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -12,11 +27,9 @@
         <!-- SEO BÁSICO -->
 		<title>{title}</title>
         <meta name="description" content={description} />
-        
-        <!-- CANONICAL URL (Evita que Google piense que tienes contenido duplicado) -->
         <link rel="canonical" href={canonicalURL} />
 
-        <!-- OPEN GRAPH (Para que se vea bien en WhatsApp, Facebook, LinkedIn) -->
+        <!-- OPEN GRAPH (WhatsApp, Redes) -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalURL} />
         <meta property="og:title" content={title} />
@@ -28,67 +41,35 @@
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={new URL(image, canonicalURL)} />
-<!-- DATOS ESTRUCTURADOS (JSON-LD) PARA SEO LOCAL -->
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Raíz Digital",
-    "image": "https://www.tudominio.com/img/tu-logo.png",
-    "description": "Consultoría Informática, automatización y desarrollo de software a medida.",
-    "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Oberá",
-        "addressRegion": "Misiones",
-        "addressCountry": "AR"
-    },
-    "url": "https://www.tudominio.com",
-    "priceRange": "$$"
-    }
-    </script>
 
-    <!-- Verificación de Google Search Console -->
-    <meta name="google-site-verification" content="AQUI_IRA_EL_CODIGO_QUE_TE_DE_GOOGLE" />
-
-    <!-- Google Analytics (GA4) -->
-    <!-- Google te dará un script como este, va justo antes del cierre del </head> -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-    </script>
+        <!-- 2. GOOGLE ANALYTICS (Solucionado con is:inline) -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        </script>
 	</head>
-    <body>
-        <slot /> <!-- Aquí se renderiza tu página -->
-
-        <!-- ESTE SCRIPT HACE QUE LAS COSAS APAREZCAN AL BAJAR -->
+    
+	<body class="bg-[#020617] text-white overflow-x-hidden">
+		<!-- Aquí se inyecta el contenido de tus páginas -->
+        <slot />
+        
+        <!-- SCRIPT DE ANIMACIONES (Aquí no usamos is:inline porque es código nuestro) -->
         <script>
-            // Función para iniciar el observador
             const initScrollReveal = () => {
                 const hiddenElements = document.querySelectorAll('.reveal');
-                
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
                             entry.target.classList.add('active');
-                            // Opcional: Descomenta la siguiente línea si quieres que la animación ocurra SOLO UNA VEZ
-                            // observer.unobserve(entry.target);
                         }
                     });
-                }, {
-                    threshold: 0.15 // Se activa cuando se ve el 15% del elemento
-                });
-
+                }, { threshold: 0.15 });
                 hiddenElements.forEach((el) => observer.observe(el));
             };
-
-            // En Astro, hay que ejecutarlo cuando el DOM carga
             document.addEventListener('DOMContentLoaded', initScrollReveal);
-            
-            // Si usas ViewTransitions de Astro, también necesitas esto:
-            document.addEventListener('astro:page-load', initScrollReveal);
         </script>
-    </body>
+	</body>
 </html>
