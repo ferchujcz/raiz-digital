@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tudominio.com/sitemap-index.xml
+Sitemap: https://somosraizdigital.com.ar/sitemap-index.xml

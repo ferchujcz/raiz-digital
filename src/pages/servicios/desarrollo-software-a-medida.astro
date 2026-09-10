@@ -1,0 +1,214 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout 
+    title="Desarrollo de Software a Medida y Sistemas de Gestión | Raíz Digital"
+    description="Desarrollamos sistemas de gestión, ERPs y software empresarial a medida. Soluciones robustas y escalables para empresas en Misiones y toda Argentina."
+    breadcrumbs={[
+      { name: "Inicio", url: "https://somosraizdigital.com.ar/" },
+      { name: "Desarrollo de Software a Medida", url: "https://somosraizdigital.com.ar/servicios/desarrollo-software-a-medida/" }
+    ]}
+>
+  <Header />
+
+  <main class="pt-32 pb-24 container mx-auto px-6">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="mb-8">
+      <ol class="flex items-center gap-2 text-sm text-gray-400">
+        <li><a href="/" class="hover:text-[#00FF85] transition-colors">Inicio</a></li>
+        <li><span>&rsaquo;</span></li>
+        <li class="text-gray-500">Servicios</li>
+        <li><span>&rsaquo;</span></li>
+        <li class="text-white font-medium" aria-current="page">Desarrollo de Software a Medida</li>
+      </ol>
+    </nav>
+
+    <!-- Hero de Servicio -->
+    <header class="max-w-4xl mb-16">
+      <span class="px-3 py-1 text-xs font-bold text-[#00FF85] bg-[#00FF85]/10 rounded-full uppercase tracking-wider">Servicio Especializado</span>
+      <h1 class="text-4xl md:text-6xl font-black text-white mt-4 mb-6 leading-tight">
+        Desarrollo de Software a Medida <span class="text-[#00FF85]">y Sistemas Web Empresariales</span>
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl leading-relaxed">
+        Construimos plataformas digitales y sistemas de gestión diseñados en torno a la operativa real de tu empresa. Eliminamos cuellos de botella manuales con código robusto, seguro y sin dependencias de software genérico.
+      </p>
+    </header>
+
+    <!-- Sección 1: ¿Por qué elegir software a medida? -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">
+        ¿Por qué elegir un sistema a medida en lugar de un software genérico?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 hover:border-emerald-500/40 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-[#00FF85] font-black text-xl mb-6">01</div>
+          <h3 class="text-xl font-bold text-white mb-3">Adaptación al 100% a tus reglas de negocio</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Los programas comerciales te obligan a adaptar tus procesos a su interfaz. Un desarrollo a medida se programa exactamente según el flujo de trabajo de tu equipo, sin pantallas sobrantes ni pasos innecesarios.
+          </p>
+        </div>
+
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 hover:border-emerald-500/40 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-[#00FF85] font-black text-xl mb-6">02</div>
+          <h3 class="text-xl font-bold text-white mb-3">Control sobre tus procesos y datos</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Tu información sensible no depende de servidores compartidos de terceros ni de cambios de políticas unilaterales. Eres dueño absoluto de tu base de datos y de la lógica de tu sistema.
+          </p>
+        </div>
+
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 hover:border-emerald-500/40 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-[#00FF85] font-black text-xl mb-6">03</div>
+          <h3 class="text-xl font-bold text-white mb-3">Arquitectura preparada para crecer</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            A medida que tu volumen de transacciones, depósitos o sucursales se expande, la plataforma evoluciona agregando módulos específicos sin tener que pagar tarifas abusivas por usuario adicional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Tipos de sistemas que desarrollamos -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">
+        Tipos de sistemas que desarrollamos
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Sistemas de Gestión Interna</h3>
+          <p class="text-gray-400 text-sm">Organización de flujos de trabajo, seguimiento de tareas y gestión de recursos operativos de la empresa.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white mb-2">ERP y CRM</h3>
+          <p class="text-gray-400 text-sm">Integración de compras, ventas, facturación y relación con clientes en una sola fuente de datos unificada.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Paneles de Control y Dashboards</h3>
+          <p class="text-gray-400 text-sm">Visualización en tiempo real de indicadores clave (KPIs), métricas financieras y rendimiento por sector.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Sistemas de Stock, Ventas y Auditoría</h3>
+          <p class="text-gray-400 text-sm">Control estricto de inventarios, lectoras móviles, trazabilidad de artículos y auditoría de pérdidas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Cómo desarrollamos tu sistema -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">
+        Cómo desarrollamos tu sistema
+      </h2>
+      <div class="grid md:grid-cols-6 gap-4">
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-5 text-center">
+          <span class="text-xs font-bold text-[#00FF85] uppercase">Paso 1</span>
+          <h3 class="text-base font-bold text-white mt-1 mb-2">Relevamiento</h3>
+          <p class="text-xs text-gray-400">Auditoría del problema operativo y objetivos del negocio.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-5 text-center">
+          <span class="text-xs font-bold text-[#00FF85] uppercase">Paso 2</span>
+          <h3 class="text-base font-bold text-white mt-1 mb-2">Diseño de solución</h3>
+          <p class="text-xs text-gray-400">Arquitectura de datos, flujos de usuario y prototipos.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-5 text-center">
+          <span class="text-xs font-bold text-[#00FF85] uppercase">Paso 3</span>
+          <h3 class="text-base font-bold text-white mt-1 mb-2">Desarrollo</h3>
+          <p class="text-xs text-gray-400">Programación modular con entregas funcionales periódicas.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-5 text-center">
+          <span class="text-xs font-bold text-[#00FF85] uppercase">Paso 4</span>
+          <h3 class="text-base font-bold text-white mt-1 mb-2">Pruebas</h3>
+          <p class="text-xs text-gray-400">Validación rigurosa de seguridad, estabilidad y carga.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-5 text-center">
+          <span class="text-xs font-bold text-[#00FF85] uppercase">Paso 5</span>
+          <h3 class="text-base font-bold text-white mt-1 mb-2">Implementación</h3>
+          <p class="text-xs text-gray-400">Puesta en marcha en producción y capacitación de usuarios.</p>
+        </div>
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-5 text-center">
+          <span class="text-xs font-bold text-[#00FF85] uppercase">Paso 6</span>
+          <h3 class="text-base font-bold text-white mt-1 mb-2">Evolución</h3>
+          <p class="text-xs text-gray-400">Soporte continuo y mejoras acordes al crecimiento de la empresa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Tecnología y arquitectura -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">
+        Tecnología y arquitectura
+      </h2>
+      <div class="bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 md:p-12">
+        <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed max-w-3xl">
+          Seleccionamos tecnologías probadas por su fiabilidad, rendimiento y seguridad. Trabajamos con arquitecturas desacopladas que permiten mantener bases de datos sólidas y experiencias de usuario ágiles tanto en escritorio como en dispositivos móviles.
+        </p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="border-l-2 border-emerald-500 pl-4">
+            <strong class="text-white block text-lg">Python & Node.js</strong>
+            <span class="text-xs text-gray-400">Servicios de backend, procesamiento de datos y automatizaciones.</span>
+          </div>
+          <div class="border-l-2 border-emerald-500 pl-4">
+            <strong class="text-white block text-lg">PostgreSQL</strong>
+            <span class="text-xs text-gray-400">Bases de datos relacionales con integridad transaccional estricta.</span>
+          </div>
+          <div class="border-l-2 border-emerald-500 pl-4">
+            <strong class="text-white block text-lg">TypeScript & Astro</strong>
+            <span class="text-xs text-gray-400">Interfaces rápidas, tipadas y de alta velocidad de respuesta.</span>
+          </div>
+          <div class="border-l-2 border-emerald-500 pl-4">
+            <strong class="text-white block text-lg">APIs & Lectura OCR</strong>
+            <span class="text-xs text-gray-400">Integración con lectores de código de barras y digitalización de documentos.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5: Caso de estudio relacionado -->
+    <section class="mb-20">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">
+        Caso de estudio: ERP de Gestión de Stock
+      </h2>
+      <div class="bg-gradient-to-r from-[#0A0A0A] to-[#0d1f18] border border-emerald-500/30 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center justify-between">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold text-[#00FF85] uppercase tracking-wider">Sistema en producción</span>
+          <h3 class="text-2xl md:text-3xl font-bold text-white mt-2 mb-4">ERP con Escaneo Móvil y Facturación OCR</h3>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Conocé cómo desarrollamos un sistema integral a medida que convirtió celulares en lectores de código de barras, incorporó carga automática de facturas mediante OCR y redujo las pérdidas de stock.
+          </p>
+          <a href="/proyectos/erp-gestion-stock" class="inline-flex items-center gap-2 bg-[#00FF85] text-black font-bold px-6 py-3 rounded-full hover:scale-105 transition-transform text-sm">
+            Ver caso de estudio completo &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 6: CTA Final -->
+    <section class="bg-gradient-to-b from-[#121212] to-[#0A0A0A] border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#00FF85]/10 to-transparent"></div>
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-4">
+          ¿Necesitás un sistema adaptado a tu empresa?
+        </h2>
+        <p class="text-gray-400 mb-8">
+          Comentanos los desafíos operativos de tu negocio. Analizamos tu requerimiento de forma directa y te proponemos una solución técnica eficiente y escalable.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://wa.link/hg6h2d" target="_blank" rel="noopener noreferrer" class="bg-[#00FF85] text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-2 w-full sm:w-auto justify-center">
+            Hablemos por WhatsApp
+          </a>
+          <a href="/contacto" class="border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/5 transition-colors w-full sm:w-auto justify-center">
+            Formulario de Contacto
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#050505] py-8 text-center text-gray-500 text-sm">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; {new Date().getFullYear()} Raíz Digital. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/fernando-czaban-b339642a6" target="_blank" rel="noopener noreferrer" class="hover:text-[#00FF85] transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</Layout>

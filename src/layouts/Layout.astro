@@ -1,19 +1,27 @@
 ---
-// 1. ESTO ES EL FRONTMATTER (Las variables que te faltaban)
+interface BreadcrumbItem {
+	name: string;
+	url: string;
+}
+
 interface Props {
 	title: string;
     description?: string;
     image?: string;
+    noindex?: boolean;
+    breadcrumbs?: BreadcrumbItem[];
 }
 
 const { 
     title, 
     description = "Consultoría Informática y Desarrollo de Software a medida en Misiones. Soluciones digitales para empresas.",
-    image = "/img/tu-logo-o-portada.jpg" 
+    image,
+    noindex = false,
+    breadcrumbs
 } = Astro.props;
 
 // Calculamos la URL para evitar el error de canonicalURL
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.raizsoluciones.com');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://somosraizdigital.com.ar');
 ---
 
 <!doctype html>
@@ -28,28 +36,53 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://www.raiz
 		<title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonicalURL} />
+        {noindex && <meta name="robots" content="noindex, nofollow" />}
 
         <!-- OPEN GRAPH (WhatsApp, Redes) -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalURL} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={new URL(image, canonicalURL)} />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:site_name" content="Raíz Digital" />
+        {image && <meta property="og:image" content={new URL(image, canonicalURL)} />}
 
         <!-- TWITTER CARDS -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={new URL(image, canonicalURL)} />
+        {image && <meta name="twitter:image" content={new URL(image, canonicalURL)} />}
 
-        <!-- 2. GOOGLE ANALYTICS (Solucionado con is:inline) -->
-        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-        <script is:inline>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        </script>
+        <!-- SCHEMA.ORG (JSON-LD) -->
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Raíz Digital",
+          "url": "https://somosraizdigital.com.ar",
+          "inLanguage": "es-AR",
+          "description": "Desarrollo de software a medida, sistemas web y automatización de procesos para empresas."
+        })} />
+        <script type="application/ld+json" set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Raíz Digital",
+          "url": "https://somosraizdigital.com.ar",
+          "sameAs": [
+            "https://www.linkedin.com/in/fernando-czaban-b339642a6"
+          ]
+        })} />
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": breadcrumbs.map((item, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": item.name,
+              "item": item.url
+            }))
+          })} />
+        )}
 	</head>
     
 	<body class="bg-[#020617] text-white overflow-x-hidden">

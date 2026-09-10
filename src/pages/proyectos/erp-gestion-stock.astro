@@ -8,10 +8,26 @@ import Contact from '../../components/Contact.astro';
     title="Sistema ERP de Stock con IA | Casos de Éxito Raíz Digital"
     description="Descubre cómo nuestro sistema de gestión predice ventas y lee facturas con OCR automáticamente."
     image="/img/proyectos/erp-portada.png"
+    breadcrumbs={[
+      { name: "Inicio", url: "https://somosraizdigital.com.ar/" },
+      { name: "Proyectos", url: "https://somosraizdigital.com.ar/#proyectos" },
+      { name: "ERP de Gestión de Stock", url: "https://somosraizdigital.com.ar/proyectos/erp-gestion-stock/" }
+    ]}
 >
   <Header />
   
   <main class="pt-32 pb-24 container mx-auto px-6">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-2 text-sm text-gray-400">
+        <li><a href="/" class="hover:text-[#00FF85] transition-colors">Inicio</a></li>
+        <li><span>&rsaquo;</span></li>
+        <li><a href="/#proyectos" class="hover:text-[#00FF85] transition-colors">Proyectos</a></li>
+        <li><span>&rsaquo;</span></li>
+        <li class="text-white font-medium" aria-current="page">ERP de Gestión de Stock</li>
+      </ol>
+    </nav>
+
     <a href="/#proyectos" class="text-[#00FF85] mb-8 inline-flex items-center gap-2 hover:underline font-bold">
       &larr; Volver al Portafolio
     </a>
@@ -19,15 +35,39 @@ import Contact from '../../components/Contact.astro';
     <div class="grid lg:grid-cols-2 gap-12 items-start mt-4">
       <div class="space-y-4">
         <div class="bg-[#0A0A0A] rounded-3xl aspect-video flex items-center justify-center border border-white/10 overflow-hidden relative group">
-          <img src="/img/proyectos/erp-portada.png" alt="Dashboard Principal" class="w-full h-full object-cover" />
+          <img 
+            src="/img/proyectos/erp-portada.png" 
+            alt="Dashboard principal del sistema ERP de gestión de stock" 
+            width="1080" 
+            height="1350" 
+            loading="eager" 
+            decoding="async" 
+            class="w-full h-full object-cover" 
+          />
         </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div class="bg-[#0A0A0A] rounded-2xl aspect-video border border-white/10 overflow-hidden">
-            <img src="/img/proyectos/erp-alertas.png" alt="Vista de Escaneo" class="w-full h-full object-cover" />
+            <img 
+              src="/img/proyectos/erp-alertas.png" 
+              alt="Módulo de escaneo de código de barras y alertas de inventario" 
+              width="1288" 
+              height="680" 
+              loading="lazy" 
+              decoding="async" 
+              class="w-full h-full object-cover" 
+            />
           </div>
           <div class="bg-[#0A0A0A] rounded-2xl aspect-video border border-white/10 overflow-hidden">
-            <img src="/img/proyectos/erp-analisis-2.png" alt="Generación de Reportes" class="w-full h-full object-cover" />
+            <img 
+              src="/img/proyectos/erp-analisis.png" 
+              alt="Módulo de reportes y análisis predictivo de ventas" 
+              width="1320" 
+              height="690" 
+              loading="lazy" 
+              decoding="async" 
+              class="w-full h-full object-cover" 
+            />
           </div>
         </div>
       </div>
@@ -40,10 +80,10 @@ import Contact from '../../components/Contact.astro';
         <h1 class="text-4xl md:text-5xl font-black mb-6 text-white leading-tight">ERP Stock <span class="text-[#00FF85]">Inteligente</span></h1>
         
         <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-          Un sistema de gestión integral diseñado específicamente para eliminar pérdidas y automatizar el trabajo rutinario. No es solo un inventario, es un motor que predice el comportamiento de tu negocio.
+          Un sistema de gestión integral diseñado como parte de nuestros servicios de <a href="/servicios/desarrollo-software-a-medida" class="text-[#00FF85] hover:underline font-semibold">desarrollo de software a medida</a> para eliminar pérdidas y automatizar el trabajo rutinario. No es solo un inventario, es un motor que predice el comportamiento de tu negocio.
         </p>
         
-        <h3 class="text-xl font-bold mb-4 text-white border-b border-white/10 pb-2">Características Destacadas:</h3>
+        <h2 class="text-xl font-bold mb-4 text-white border-b border-white/10 pb-2">Características Destacadas:</h2>
         <ul class="space-y-5 mb-10">
           <li class="flex items-start gap-3 text-gray-300">
             <span class="text-[#00FF85] text-xl mt-[-2px]">&check;</span> 
@@ -68,7 +108,7 @@ import Contact from '../../components/Contact.astro';
           </li>
         </ul>
 
-        <a href="https://wa.link/om5m4h" target="_blank" class="flex justify-center items-center gap-3 w-full bg-[#00FF85] text-black text-center py-5 rounded-2xl font-black text-lg hover:scale-[1.02] transition-transform">
+        <a href="https://wa.link/om5m4h" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-3 w-full bg-[#00FF85] text-black text-center py-5 rounded-2xl font-black text-lg hover:scale-[1.02] transition-transform">
           Quiero solicitar este sistema
         </a>
       </div>
