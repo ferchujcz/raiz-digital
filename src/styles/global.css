@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #020617; /* Slate 950 (Fondo oscuro) */
-  color: white;
+  background-color: #0A0A0A; /* Negro principal */
+  color: #F5F5F5;
   overflow-x: hidden;
 }
 
@@ -25,9 +25,9 @@ body {
 .tech-marquee {
   width: 100%;
   overflow: hidden;
-  background: rgba(16, 185, 129, 0.05);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: rgba(34, 197, 94, 0.04);
+  border-top: 1px solid #18181B;
+  border-bottom: 1px solid #18181B;
   padding: 1.5rem 0;
   display: flex;
 }
@@ -49,8 +49,8 @@ body {
 }
 .firefly {
   position: absolute; width: 3px; height: 3px;
-  background-color: #10b981; border-radius: 50%;
-  box-shadow: 0 0 10px #10b981; opacity: 0;
+  background-color: #22C55E; border-radius: 50%;
+  box-shadow: 0 0 10px #22C55E; opacity: 0;
   animation: fly 15s linear infinite;
 }
 .firefly:nth-child(1) { left: 10%; top: 90%; animation-duration: 12s; }
