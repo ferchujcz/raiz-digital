@@ -1,0 +1,118 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Contact from '../../components/Contact.astro';
+---
+
+<Layout 
+    title="Sistema de Gestión para Taller | Casos de Éxito Raíz Digital"
+    description="Descubre nuestro sistema integral para talleres: gestión de clientes, presupuestos, turnos y control de personal."
+    image="/img/sist_ges_tall/dash.png"
+    breadcrumbs={[
+      { name: "Inicio", url: "https://somosraizdigital.com.ar/" },
+      { name: "Proyectos", url: "https://somosraizdigital.com.ar/#proyectos" },
+      { name: "Sistema de Gestión para Taller", url: "https://somosraizdigital.com.ar/proyectos/sistema-gestion-taller/" }
+    ]}
+>
+  <Header />
+  
+  <main class="pt-32 pb-24 container mx-auto px-6">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-2 text-sm text-[#A1A1AA]">
+        <li><a href="/" class="hover:text-[#22C55E] transition-colors">Inicio</a></li>
+        <li><span>&rsaquo;</span></li>
+        <li><a href="/#proyectos" class="hover:text-[#22C55E] transition-colors">Proyectos</a></li>
+        <li><span>&rsaquo;</span></li>
+        <li class="text-[#F5F5F5] font-medium" aria-current="page">Sistema de Taller</li>
+      </ol>
+    </nav>
+
+    <a href="/#proyectos" class="text-[#22C55E] mb-8 inline-flex items-center gap-2 hover:underline font-bold">
+      &larr; Volver al Portafolio
+    </a>
+    
+    <div class="mb-16 text-center max-w-3xl mx-auto">
+      <div class="mb-4 flex gap-2 justify-center">
+          <span class="px-3 py-1 text-xs font-bold text-[#22C55E] bg-[#22C55E]/10 rounded-full uppercase tracking-wider">Sistema Completado</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black mb-6 text-[#F5F5F5] leading-tight">Sistema de Gestión <span class="text-[#22C55E]">Integral para Taller</span></h1>
+      <p class="text-[#D4D4D8] text-lg mb-8 leading-relaxed">
+        Una solución completa y a medida diseñada para optimizar cada aspecto de tu taller. Desde la recepción y presupuestos hasta el control del personal y el catálogo.
+      </p>
+      <a href="https://wa.link/om5m4h" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-[#22C55E] hover:bg-[#16A34A] text-black px-8 py-4 rounded-2xl font-black text-lg hover:scale-[1.02] transition-all shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_25px_rgba(34,197,94,0.35)]">
+        Quiero solicitar este sistema
+      </a>
+    </div>
+
+    <div class="space-y-24">
+      <!-- Módulo 1: Dashboard -->
+      <section class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
+          <img src="/img/sist_ges_tall/dash.png" alt="Panel de control Dashboard" class="w-full h-auto" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Panel de Control (Dashboard)</h2>
+          <p class="text-[#A1A1AA] text-lg">Visión general del estado del taller en tiempo real. Monitorea ingresos, trabajos pendientes y métricas clave al instante.</p>
+        </div>
+      </section>
+
+      <!-- Módulo 2: Recepción -->
+      <section class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Recepción y Turnos</h2>
+          <p class="text-[#A1A1AA] text-lg">Organiza la entrada de vehículos y la agenda de turnos. Un flujo de trabajo ordenado desde que el cliente cruza la puerta.</p>
+        </div>
+        <div class="order-1 lg:order-2 bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
+          <img src="/img/sist_ges_tall/recepcion.png" alt="Módulo de Recepción" class="w-full h-auto" />
+        </div>
+      </section>
+
+      <!-- Módulo 3: Clientes -->
+      <section class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
+          <img src="/img/sist_ges_tall/clientes.png" alt="Gestión de Clientes" class="w-full h-auto" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Gestión de Clientes</h2>
+          <p class="text-[#A1A1AA] text-lg">Base de datos centralizada con el historial de cada cliente y sus vehículos, facilitando la fidelización y el seguimiento.</p>
+        </div>
+      </section>
+
+      <!-- Módulo 4: Presupuestos -->
+      <section class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Presupuestos Rápidos</h2>
+          <p class="text-[#A1A1AA] text-lg">Genera y envía presupuestos detallados en minutos. Transparencia y agilidad para cerrar más trabajos.</p>
+        </div>
+        <div class="order-1 lg:order-2 bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
+          <img src="/img/sist_ges_tall/presupuesto.png" alt="Generación de Presupuestos" class="w-full h-auto" />
+        </div>
+      </section>
+
+      <!-- Módulo 5: Catálogo -->
+      <section class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
+          <img src="/img/sist_ges_tall/catalogo.png" alt="Catálogo de Productos" class="w-full h-auto" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Catálogo de Repuestos y Servicios</h2>
+          <p class="text-[#A1A1AA] text-lg">Control total de stock y servicios ofrecidos, con precios actualizados y búsqueda rápida integrada en los presupuestos.</p>
+        </div>
+      </section>
+
+      <!-- Módulo 6: Personal -->
+      <section class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Gestión de Personal</h2>
+          <p class="text-[#A1A1AA] text-lg">Asigna trabajos a tus técnicos, controla tiempos de reparación y evalúa la productividad de tu equipo.</p>
+        </div>
+        <div class="order-1 lg:order-2 bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
+          <img src="/img/sist_ges_tall/personal.png" alt="Gestión de Personal" class="w-full h-auto" />
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <Contact />
+</Layout>
