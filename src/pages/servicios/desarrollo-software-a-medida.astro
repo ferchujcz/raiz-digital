@@ -74,19 +74,19 @@ import Header from '../../components/Header.astro';
         Tipos de sistemas que desarrollamos
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Sistemas de Gestión Interna</h3>
           <p class="text-[#A1A1AA] text-sm">Organización de flujos de trabajo, seguimiento de tareas y gestión de recursos operativos de la empresa.</p>
         </div>
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">ERP y CRM</h3>
           <p class="text-[#A1A1AA] text-sm">Integración de compras, ventas, facturación y relación con clientes en una sola fuente de datos unificada.</p>
         </div>
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Paneles de Control y Dashboards</h3>
           <p class="text-[#A1A1AA] text-sm">Visualización en tiempo real de indicadores clave (KPIs), métricas financieras y rendimiento por sector.</p>
         </div>
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Sistemas de Stock, Ventas y Auditoría</h3>
           <p class="text-[#A1A1AA] text-sm">Control estricto de inventarios, lectoras móviles, trazabilidad de artículos y auditoría de pérdidas.</p>
         </div>
@@ -142,21 +142,21 @@ import Header from '../../components/Header.astro';
           Seleccionamos tecnologías probadas por su fiabilidad, rendimiento y seguridad. Trabajamos con arquitecturas desacopladas que permiten mantener bases de datos sólidas y experiencias de usuario ágiles tanto en escritorio como en dispositivos móviles.
         </p>
         <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">Python & Node.js</strong>
-            <span class="text-xs text-[#A1A1AA]">Servicios de backend, procesamiento de datos y automatizaciones.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Procesamiento de Datos</strong>
+            <span class="text-xs text-[#A1A1AA]">Servicios de backend sólidos para manejar grandes volúmenes de información y automatizaciones.</span>
           </div>
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">PostgreSQL</strong>
-            <span class="text-xs text-[#A1A1AA]">Bases de datos relacionales con integridad transaccional estricta.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Bases de Datos Robustas</strong>
+            <span class="text-xs text-[#A1A1AA]">Sistemas de almacenamiento con integridad transaccional estricta y alta seguridad.</span>
           </div>
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">TypeScript & Astro</strong>
-            <span class="text-xs text-[#A1A1AA]">Interfaces rápidas, tipadas y de alta velocidad de respuesta.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Interfaces Reactivas</strong>
+            <span class="text-xs text-[#A1A1AA]">Plataformas de alta velocidad y respuesta inmediata para una gestión ágil.</span>
           </div>
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">APIs & Lectura OCR</strong>
-            <span class="text-xs text-[#A1A1AA]">Integración con lectores de código de barras y digitalización de documentos.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Integraciones y APIS</strong>
+            <span class="text-xs text-[#A1A1AA]">Conexión con hardware, lectores de código de barras, OCR y otros servicios empresariales.</span>
           </div>
         </div>
       </div>
@@ -207,6 +207,7 @@ import Header from '../../components/Header.astro';
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p>&copy; {new Date().getFullYear()} Raíz Digital. Todos los derechos reservados.</p>
       <div class="flex gap-4">
+        <a href="https://www.instagram.com/raiz.digital.ar" target="_blank" rel="noopener noreferrer" class="hover:text-[#22C55E] transition-colors">Instagram</a>
         <a href="https://www.linkedin.com/in/fernando-czaban-b339642a6" target="_blank" rel="noopener noreferrer" class="hover:text-[#22C55E] transition-colors">LinkedIn</a>
       </div>
     </div>

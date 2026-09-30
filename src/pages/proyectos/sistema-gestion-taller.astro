@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Contact from '../../components/Contact.astro';
@@ -47,7 +47,7 @@ import Contact from '../../components/Contact.astro';
 
     <div class="space-y-24">
       <!-- Módulo 1: Dashboard -->
-      <section class="grid lg:grid-cols-2 gap-12 items-center">
+      <section class="grid lg:grid-cols-2 gap-12 items-center reveal">
         <div class="bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
           <img src="/img/sist_ges_tall/dash.png" alt="Panel de control Dashboard" class="w-full h-auto" />
         </div>
@@ -58,7 +58,7 @@ import Contact from '../../components/Contact.astro';
       </section>
 
       <!-- Módulo 2: Recepción -->
-      <section class="grid lg:grid-cols-2 gap-12 items-center">
+      <section class="grid lg:grid-cols-2 gap-12 items-center reveal">
         <div class="order-2 lg:order-1">
           <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Recepción y Turnos</h2>
           <p class="text-[#A1A1AA] text-lg">Organiza la entrada de vehículos y la agenda de turnos. Un flujo de trabajo ordenado desde que el cliente cruza la puerta.</p>
@@ -69,7 +69,7 @@ import Contact from '../../components/Contact.astro';
       </section>
 
       <!-- Módulo 3: Clientes -->
-      <section class="grid lg:grid-cols-2 gap-12 items-center">
+      <section class="grid lg:grid-cols-2 gap-12 items-center reveal">
         <div class="bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
           <img src="/img/sist_ges_tall/clientes.png" alt="Gestión de Clientes" class="w-full h-auto" />
         </div>
@@ -80,7 +80,7 @@ import Contact from '../../components/Contact.astro';
       </section>
 
       <!-- Módulo 4: Presupuestos -->
-      <section class="grid lg:grid-cols-2 gap-12 items-center">
+      <section class="grid lg:grid-cols-2 gap-12 items-center reveal">
         <div class="order-2 lg:order-1">
           <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Presupuestos Rápidos</h2>
           <p class="text-[#A1A1AA] text-lg">Genera y envía presupuestos detallados en minutos. Transparencia y agilidad para cerrar más trabajos.</p>
@@ -91,7 +91,7 @@ import Contact from '../../components/Contact.astro';
       </section>
 
       <!-- Módulo 5: Catálogo -->
-      <section class="grid lg:grid-cols-2 gap-12 items-center">
+      <section class="grid lg:grid-cols-2 gap-12 items-center reveal">
         <div class="bg-[#111111] rounded-3xl overflow-hidden border border-[#18181B] shadow-lg">
           <img src="/img/sist_ges_tall/catalogo.png" alt="Catálogo de Productos" class="w-full h-auto" />
         </div>
@@ -102,7 +102,7 @@ import Contact from '../../components/Contact.astro';
       </section>
 
       <!-- Módulo 6: Personal -->
-      <section class="grid lg:grid-cols-2 gap-12 items-center">
+      <section class="grid lg:grid-cols-2 gap-12 items-center reveal">
         <div class="order-2 lg:order-1">
           <h2 class="text-3xl font-bold text-[#F5F5F5] mb-4">Gestión de Personal</h2>
           <p class="text-[#A1A1AA] text-lg">Asigna trabajos a tus técnicos, controla tiempos de reparación y evalúa la productividad de tu equipo.</p>
@@ -115,4 +115,14 @@ import Contact from '../../components/Contact.astro';
   </main>
   
   <Contact />
+
+  <footer class="border-t border-[#18181B] bg-[#0A0A0A] py-8 text-center text-[#A1A1AA] text-sm">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; {new Date().getFullYear()} Raíz Digital. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+        <a href="https://www.instagram.com/raiz.digital.ar" target="_blank" rel="noopener noreferrer" class="hover:text-[#22C55E] transition-colors">Instagram</a>
+        <a href="https://www.linkedin.com/in/fernando-czaban-b339642a6" target="_blank" rel="noopener noreferrer" class="hover:text-[#22C55E] transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 </Layout>

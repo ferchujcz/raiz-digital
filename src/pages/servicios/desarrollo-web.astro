@@ -82,19 +82,19 @@ import Header from '../../components/Header.astro';
         ¿Qué podemos desarrollar?
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Sitios web corporativos</h3>
           <p class="text-[#A1A1AA] text-sm">Presencia digital profesional de alta gama para empresas e industrias que necesitan proyectar solidez y confianza.</p>
         </div>
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Landing pages</h3>
           <p class="text-[#A1A1AA] text-sm">Páginas de aterrizaje enfocadas en conversión directa para lanzamientos de servicios o captación de prospectos.</p>
         </div>
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Portales y plataformas web</h3>
-          <p class="text-[#A1A1AA] text-sm">Entornos web interactivos con autenticación de usuarios, paneles de autogestión y conexión a bases de datos. Si tu proyecto requiere lógica empresarial compleja, mirá nuestro servicio de <a href="/servicios/desarrollo-software-a-medida" class="text-[#22C55E] hover:underline font-semibold">desarrollo de software a medida</a>.</p>
+          <p class="text-[#A1A1AA] text-sm">Entornos web interactivos con autenticación de usuarios, paneles de autogestión y conexión a bases de datos. Si tu proyecto requiere lógica empresarial compleja, mirá nuestro servicio de <a href="/servicios/desarrollo-software-a-medida" class="text-[#22C55E] hover:underline font-semibold">desarrollo a medida</a>.</p>
         </div>
-        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6">
+        <div class="bg-[#111111] border border-[#18181B] rounded-2xl p-6 hover:-translate-y-2 hover:border-[#22C55E]/40 transition-all duration-300">
           <h3 class="text-lg font-bold text-[#F5F5F5] mb-2">Catálogos digitales y soluciones comerciales</h3>
           <p class="text-[#A1A1AA] text-sm">Muestrarios de productos y servicios con integración directa a canales de venta y pedidos por WhatsApp.</p>
         </div>
@@ -111,17 +111,17 @@ import Header from '../../components/Header.astro';
           Evitamos las plataformas lentas y dependientes de decenas de plugins de terceros. Construimos soluciones web utilizando un stack moderno, seguro y optimizado para la web actual:
         </p>
         <div class="grid sm:grid-cols-3 gap-6">
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">Astro</strong>
-            <span class="text-xs text-[#A1A1AA]">Generación de sitios estáticos ultrarrápidos con cero JavaScript innecesario en el cliente.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Arquitectura de Alta Velocidad</strong>
+            <span class="text-xs text-[#A1A1AA]">Sitios ultrarrápidos y optimizados con carga casi instantánea.</span>
           </div>
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">TypeScript</strong>
-            <span class="text-xs text-[#A1A1AA]">Código robusto, seguro y tipado para evitar errores en tiempo de ejecución.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Código Seguro y Escalable</strong>
+            <span class="text-xs text-[#A1A1AA]">Desarrollo robusto para evitar errores y garantizar el funcionamiento continuo.</span>
           </div>
-          <div class="border-l-2 border-[#22C55E] pl-4">
-            <strong class="text-[#F5F5F5] block text-lg">Tailwind CSS</strong>
-            <span class="text-xs text-[#A1A1AA]">Estilos modulares y ligeros sin hojas de estilo infladas que ralenticen la carga.</span>
+          <div class="border-l-2 border-[#22C55E] pl-4 transition-transform hover:-translate-y-1">
+            <strong class="text-[#F5F5F5] block text-lg">Diseño Modular</strong>
+            <span class="text-xs text-[#A1A1AA]">Interfaces elegantes y ligeras sin código basura que ralentice la experiencia.</span>
           </div>
         </div>
       </div>
@@ -153,6 +153,7 @@ import Header from '../../components/Header.astro';
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p>&copy; {new Date().getFullYear()} Raíz Digital. Todos los derechos reservados.</p>
       <div class="flex gap-4">
+        <a href="https://www.instagram.com/raiz.digital.ar" target="_blank" rel="noopener noreferrer" class="hover:text-[#22C55E] transition-colors">Instagram</a>
         <a href="https://www.linkedin.com/in/fernando-czaban-b339642a6" target="_blank" rel="noopener noreferrer" class="hover:text-[#22C55E] transition-colors">LinkedIn</a>
       </div>
     </div>
